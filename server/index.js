@@ -4,6 +4,11 @@ const cors = require("cors");
 const app = express();
 const PORT = 5000;
 
+
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running! Use /api routes like /api/login");
+});
+
 // Middleware
 app.use(cors()); // allow frontend http://localhost:3000
 app.use(express.json()); // parse JSON body
